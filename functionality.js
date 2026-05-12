@@ -1,0 +1,1 @@
+console.log("functionality.js is loaded");
