@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Job Application Tracker</title>
+
+    <!-- Fonts  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+     <!-- Tailwind CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+
+      <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom Theme Tailwind Css -->
+        <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+            sans:    ['"Plus Jakarta Sans"',  'system-ui', 'sans-serif'],
+          },
+          keyframes: {
+            bump: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '40%':      { transform: 'scale(1.10)' },
+            },
+            'card-in': {
+              from: { opacity: '0', transform: 'translateY(8px)' },
+              to:   { opacity: '1', transform: 'translateY(0)' },
+            },
+            'card-out': {
+              to: { opacity: '0', transform: 'translateY(-4px) scale(0.98)' },
+            },
+          },
+          animation: {
+            bump:       'bump 360ms cubic-bezier(0.22, 1, 0.36, 1)',
+            'card-in':  'card-in 280ms cubic-bezier(0.22, 1, 0.36, 1) both',
+            'card-out': 'card-out 240ms ease-in forwards',
+          },
+        },
+      },
+    }
+  </script>
+
 </head>
 <body>
-   <h1>Hello Git</h1> 
+   <h1>Hello Git
+    
+   </h1> 
 </body>
 </html>
