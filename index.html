@@ -8,7 +8,7 @@
     <!-- Fonts  -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
      <!-- Tailwind CSS -->
       <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Custom Theme Tailwind Css -->
-        <script>
+    <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -25,129 +25,108 @@
             display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
             sans:    ['"Plus Jakarta Sans"',  'system-ui', 'sans-serif'],
           },
-          keyframes: {
-            bump: {
-              '0%, 100%': { transform: 'scale(1)' },
-              '40%':      { transform: 'scale(1.10)' },
-            },
-            'card-in': {
-              from: { opacity: '0', transform: 'translateY(8px)' },
-              to:   { opacity: '1', transform: 'translateY(0)' },
-            },
-            'card-out': {
-              to: { opacity: '0', transform: 'translateY(-4px) scale(0.98)' },
-            },
-          },
-          animation: {
-            bump:       'bump 360ms cubic-bezier(0.22, 1, 0.36, 1)',
-            'card-in':  'card-in 280ms cubic-bezier(0.22, 1, 0.36, 1) both',
-            'card-out': 'card-out 240ms ease-in forwards',
-          },
         },
       },
     }
-  </script>
-
+    </script>
 </head>
 <body class="font-sans bg-[#F7F7F2] text-slate-900 min-h-screen">
 
 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
 
   <!-- ============ TOP BAR ============ -->
-    <header class="flex items-center justify-between mb-8 sm:mb-10">
-      <a href="#" class="flex items-center gap-2.5">
-        <span class="grid place-items-center w-9 h-9 rounded-xl bg-slate-900 text-white shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
-        </span>
-        <span class="font-display font-semibold tracking-tight text-lg">JobTrail</span>
-      </a>
-      <a href="#" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
-        Documentation
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-      </a>
-    </header>
+  <header class="flex items-center justify-between mb-8 sm:mb-10">
+    <a href="#" class="flex items-center gap-2.5">
+      <span class="grid place-items-center w-9 h-9 rounded-xl bg-slate-900 text-white shadow-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+      </span>
+      <span class="font-display font-semibold tracking-tight text-lg">JobTrail</span>
+    </a>
+    <a href="#" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
+      Documentation
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
+  </header>
 
+  <!-- ============ HEADING ============ -->
+  <section class="mb-7 sm:mb-9">
+    <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
+      Job Application Tracker
+    </h1>
+    <p class="mt-2 text-slate-500 max-w-xl">
+      Triage open roles, mark interviews and rejections, and keep a clean view of where every application stands.
+    </p>
+  </section>
 
-
-      <!-- ============ HEADING ============ -->
-    <section class="mb-7 sm:mb-9">
-      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
-        Job Application Tracker
-      </h1>
-      <p class="mt-2 text-slate-500 max-w-xl">
-        Triage open roles, mark interviews and rejections, and keep a clean view of where every application stands.
-      </p>
-    </section>
- 
-    <!-- ============ DASHBOARD STATS ============ -->
-    <section class="grid grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-10">
-      <article class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all">
-        <div class="card-body p-4 sm:p-5 gap-1">
-          <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500">
-            <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span>
-            Total
-          </div>
-          <div id="stat-total" class="font-display font-semibold text-[28px] sm:text-4xl lg:text-5xl tracking-tight tabular-nums text-slate-900 leading-none mt-1">8</div>
+  <!-- ============ DASHBOARD STATS ============ -->
+  <section class="grid grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-10">
+    <article class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all">
+      <div class="card-body p-4 sm:p-5 gap-1">
+        <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500">
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span>
+          Total
         </div>
-      </article>
- 
-      <article class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all">
-        <div class="card-body p-4 sm:p-5 gap-1">
-          <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            Interview
-          </div>
-          <div id="stat-interview" class="font-display font-semibold text-[28px] sm:text-4xl lg:text-5xl tracking-tight tabular-nums text-emerald-500 leading-none mt-1">0</div>
-        </div>
-      </article>
- 
-      <article class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all">
-        <div class="card-body p-4 sm:p-5 gap-1">
-          <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500">
-            <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-            Rejected
-          </div>
-          <div id="stat-rejected" class="font-display font-semibold text-[28px] sm:text-4xl lg:text-5xl tracking-tight tabular-nums text-red-500 leading-none mt-1">0</div>
-        </div>
-      </article>
-    </section>
- 
-    <!-- ============ JOBS SECTION ============ -->
-    <section>
-      <!-- Section title + count -->
-      <div class="flex items-end justify-between mb-4">
-        <h2 class="font-display text-2xl sm:text-3xl font-semibold tracking-tight">Available Jobs</h2>
-        <span id="jobs-count" class="text-sm text-slate-500 font-medium">8 jobs</span>
+        <div id="stat-total" class="font-display font-semibold text-[28px] sm:text-4xl lg:text-5xl tracking-tight tabular-nums text-slate-900 leading-none mt-1">8</div>
       </div>
- 
-      <!-- Tabs -->
-      <div role="tablist" class="tabs tabs-boxed bg-slate-100 p-1 inline-flex" id="tab-strip">
-        <button role="tab" data-tab="all"       class="tab tab-active font-medium" aria-selected="true">All</button>
-        <button role="tab" data-tab="interview" class="tab font-medium"            aria-selected="false">Interview</button>
-        <button role="tab" data-tab="rejected"  class="tab font-medium"            aria-selected="false">Rejected</button>
+    </article>
+
+    <article class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all">
+      <div class="card-body p-4 sm:p-5 gap-1">
+        <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Interview
+        </div>
+        <div id="stat-interview" class="font-display font-semibold text-[28px] sm:text-4xl lg:text-5xl tracking-tight tabular-nums text-emerald-500 leading-none mt-1">0</div>
       </div>
- 
-      <!-- Jobs list -->
-      <div id="jobs-list" class="mt-5 space-y-3">
- 
+    </article>
+
+    <article class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all">
+      <div class="card-body p-4 sm:p-5 gap-1">
+        <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500">
+          <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+          Rejected
+        </div>
+        <div id="stat-rejected" class="font-display font-semibold text-[28px] sm:text-4xl lg:text-5xl tracking-tight tabular-nums text-red-500 leading-none mt-1">0</div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ JOBS SECTION ============ -->
+  <section>
+    <!-- Section title + count -->
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="font-display text-2xl sm:text-3xl font-semibold tracking-tight">Available Jobs</h2>
+      <span id="jobs-count" class="text-sm text-slate-500 font-medium">8 jobs</span>
+    </div>
+
+    <!-- Tabs -->
+    <div role="tablist" class="tabs tabs-boxed bg-slate-100 p-1 inline-flex">
+      <button id="tab-all"       class="tab tab-active font-medium">All</button>
+      <button id="tab-interview" class="tab font-medium">Interview</button>
+      <button id="tab-rejected"  class="tab font-medium">Rejected</button>
+    </div>
+
+    <!-- Jobs list -->
+    <div id="jobs-list" class="mt-5 space-y-3">
+
         <!-- ===== JOB 01 ===== -->
-        <article data-id="job-01" data-status="none"
-                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all animate-card-in border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
+        <article id="job-1" data-status="none"
+                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
           <div class="card-body p-4 sm:p-5 gap-3">
             <header class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-slate-900 to-slate-700 text-white grid place-items-center font-display font-semibold text-sm tracking-wide">TC</div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-display font-semibold text-base sm:text-lg text-slate-900 leading-tight">Senior Frontend Developer</h3>
-                  <span data-field="status-badge" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
+                  <span id="badge-1" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
                 </div>
                 <p class="text-sm text-slate-500 mt-0.5">TechCorp Industries</p>
               </div>
-              <button class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job" data-action="delete">
+              <button id="delete-btn-1" class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </header>
- 
+
             <ul class="flex flex-wrap gap-x-3.5 gap-y-1.5 text-[13px] text-slate-500 m-0 p-0 list-none">
               <li class="inline-flex items-center gap-1.5">
                 <svg width="14" height="14" class="text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -162,40 +141,40 @@
                 <span class="font-medium text-slate-700">$130,000 - $175,000</span>
               </li>
             </ul>
- 
+
             <p class="text-sm text-slate-500 leading-relaxed">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
- 
+
             <div class="flex flex-wrap gap-2 mt-1">
-              <button data-action="interview" class="btn btn-sm btn-success btn-outline gap-1.5">
+              <button id="interview-btn-1" class="btn btn-sm btn-success btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 Interview
               </button>
-              <button data-action="rejected" class="btn btn-sm btn-error btn-outline gap-1.5">
+              <button id="rejected-btn-1" class="btn btn-sm btn-error btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 Rejected
               </button>
             </div>
           </div>
         </article>
- 
+
         <!-- ===== JOB 02 ===== -->
-        <article data-id="job-02" data-status="none"
-                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all animate-card-in border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
+        <article id="job-2" data-status="none"
+                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
           <div class="card-body p-4 sm:p-5 gap-3">
             <header class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-slate-900 to-slate-700 text-white grid place-items-center font-display font-semibold text-sm tracking-wide">SX</div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-display font-semibold text-base sm:text-lg text-slate-900 leading-tight">Full Stack Engineer</h3>
-                  <span data-field="status-badge" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
+                  <span id="badge-2" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
                 </div>
                 <p class="text-sm text-slate-500 mt-0.5">StartupXYZ</p>
               </div>
-              <button class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job" data-action="delete">
+              <button id="delete-btn-2" class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </header>
- 
+
             <ul class="flex flex-wrap gap-x-3.5 gap-y-1.5 text-[13px] text-slate-500 m-0 p-0 list-none">
               <li class="inline-flex items-center gap-1.5">
                 <svg width="14" height="14" class="text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -210,40 +189,40 @@
                 <span class="font-medium text-slate-700">$120,000 - $160,000</span>
               </li>
             </ul>
- 
+
             <p class="text-sm text-slate-500 leading-relaxed">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
- 
+
             <div class="flex flex-wrap gap-2 mt-1">
-              <button data-action="interview" class="btn btn-sm btn-success btn-outline gap-1.5">
+              <button id="interview-btn-2" class="btn btn-sm btn-success btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 Interview
               </button>
-              <button data-action="rejected" class="btn btn-sm btn-error btn-outline gap-1.5">
+              <button id="rejected-btn-2" class="btn btn-sm btn-error btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 Rejected
               </button>
             </div>
           </div>
         </article>
- 
+
         <!-- ===== JOB 03 ===== -->
-        <article data-id="job-03" data-status="none"
-                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all animate-card-in border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
+        <article id="job-3" data-status="none"
+                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
           <div class="card-body p-4 sm:p-5 gap-3">
             <header class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-slate-900 to-slate-700 text-white grid place-items-center font-display font-semibold text-sm tracking-wide">MC</div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-display font-semibold text-base sm:text-lg text-slate-900 leading-tight">JavaScript Developer</h3>
-                  <span data-field="status-badge" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
+                  <span id="badge-3" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
                 </div>
                 <p class="text-sm text-slate-500 mt-0.5">MegaCorp Solutions</p>
               </div>
-              <button class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job" data-action="delete">
+              <button id="delete-btn-3" class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </header>
- 
+
             <ul class="flex flex-wrap gap-x-3.5 gap-y-1.5 text-[13px] text-slate-500 m-0 p-0 list-none">
               <li class="inline-flex items-center gap-1.5">
                 <svg width="14" height="14" class="text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -258,40 +237,40 @@
                 <span class="font-medium text-slate-700">$130,000 - $170,000</span>
               </li>
             </ul>
- 
+
             <p class="text-sm text-slate-500 leading-relaxed">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
- 
+
             <div class="flex flex-wrap gap-2 mt-1">
-              <button data-action="interview" class="btn btn-sm btn-success btn-outline gap-1.5">
+              <button id="interview-btn-3" class="btn btn-sm btn-success btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 Interview
               </button>
-              <button data-action="rejected" class="btn btn-sm btn-error btn-outline gap-1.5">
+              <button id="rejected-btn-3" class="btn btn-sm btn-error btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 Rejected
               </button>
             </div>
           </div>
         </article>
- 
+
         <!-- ===== JOB 04 ===== -->
-        <article data-id="job-04" data-status="none"
-                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all animate-card-in border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
+        <article id="job-4" data-status="none"
+                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
           <div class="card-body p-4 sm:p-5 gap-3">
             <header class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-slate-900 to-slate-700 text-white grid place-items-center font-display font-semibold text-sm tracking-wide">IL</div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-display font-semibold text-base sm:text-lg text-slate-900 leading-tight">UI/UX Engineer</h3>
-                  <span data-field="status-badge" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
+                  <span id="badge-4" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
                 </div>
                 <p class="text-sm text-slate-500 mt-0.5">Innovation Labs</p>
               </div>
-              <button class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job" data-action="delete">
+              <button id="delete-btn-4" class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </header>
- 
+
             <ul class="flex flex-wrap gap-x-3.5 gap-y-1.5 text-[13px] text-slate-500 m-0 p-0 list-none">
               <li class="inline-flex items-center gap-1.5">
                 <svg width="14" height="14" class="text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -306,40 +285,40 @@
                 <span class="font-medium text-slate-700">$110,000 - $150,000</span>
               </li>
             </ul>
- 
+
             <p class="text-sm text-slate-500 leading-relaxed">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
- 
+
             <div class="flex flex-wrap gap-2 mt-1">
-              <button data-action="interview" class="btn btn-sm btn-success btn-outline gap-1.5">
+              <button id="interview-btn-4" class="btn btn-sm btn-success btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 Interview
               </button>
-              <button data-action="rejected" class="btn btn-sm btn-error btn-outline gap-1.5">
+              <button id="rejected-btn-4" class="btn btn-sm btn-error btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 Rejected
               </button>
             </div>
           </div>
         </article>
- 
+
         <!-- ===== JOB 05 ===== -->
-        <article data-id="job-05" data-status="none"
-                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all animate-card-in border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
+        <article id="job-5" data-status="none"
+                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
           <div class="card-body p-4 sm:p-5 gap-3">
             <header class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-slate-900 to-slate-700 text-white grid place-items-center font-display font-semibold text-sm tracking-wide">CF</div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-display font-semibold text-base sm:text-lg text-slate-900 leading-tight">Backend Developer</h3>
-                  <span data-field="status-badge" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
+                  <span id="badge-5" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
                 </div>
                 <p class="text-sm text-slate-500 mt-0.5">CloudFirst Inc</p>
               </div>
-              <button class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job" data-action="delete">
+              <button id="delete-btn-5" class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </header>
- 
+
             <ul class="flex flex-wrap gap-x-3.5 gap-y-1.5 text-[13px] text-slate-500 m-0 p-0 list-none">
               <li class="inline-flex items-center gap-1.5">
                 <svg width="14" height="14" class="text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -354,40 +333,40 @@
                 <span class="font-medium text-slate-700">$140,000 - $190,000</span>
               </li>
             </ul>
- 
+
             <p class="text-sm text-slate-500 leading-relaxed">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
- 
+
             <div class="flex flex-wrap gap-2 mt-1">
-              <button data-action="interview" class="btn btn-sm btn-success btn-outline gap-1.5">
+              <button id="interview-btn-5" class="btn btn-sm btn-success btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 Interview
               </button>
-              <button data-action="rejected" class="btn btn-sm btn-error btn-outline gap-1.5">
+              <button id="rejected-btn-5" class="btn btn-sm btn-error btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 Rejected
               </button>
             </div>
           </div>
         </article>
- 
+
         <!-- ===== JOB 06 ===== -->
-        <article data-id="job-06" data-status="none"
-                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all animate-card-in border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
+        <article id="job-6" data-status="none"
+                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
           <div class="card-body p-4 sm:p-5 gap-3">
             <header class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-slate-900 to-slate-700 text-white grid place-items-center font-display font-semibold text-sm tracking-wide">DV</div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-display font-semibold text-base sm:text-lg text-slate-900 leading-tight">Data Visualization Specialist</h3>
-                  <span data-field="status-badge" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
+                  <span id="badge-6" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
                 </div>
                 <p class="text-sm text-slate-500 mt-0.5">DataViz Solutions</p>
               </div>
-              <button class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job" data-action="delete">
+              <button id="delete-btn-6" class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </header>
- 
+
             <ul class="flex flex-wrap gap-x-3.5 gap-y-1.5 text-[13px] text-slate-500 m-0 p-0 list-none">
               <li class="inline-flex items-center gap-1.5">
                 <svg width="14" height="14" class="text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -402,40 +381,40 @@
                 <span class="font-medium text-slate-700">$125,000 - $165,000</span>
               </li>
             </ul>
- 
+
             <p class="text-sm text-slate-500 leading-relaxed">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
- 
+
             <div class="flex flex-wrap gap-2 mt-1">
-              <button data-action="interview" class="btn btn-sm btn-success btn-outline gap-1.5">
+              <button id="interview-btn-6" class="btn btn-sm btn-success btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 Interview
               </button>
-              <button data-action="rejected" class="btn btn-sm btn-error btn-outline gap-1.5">
+              <button id="rejected-btn-6" class="btn btn-sm btn-error btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 Rejected
               </button>
             </div>
           </div>
         </article>
- 
+
         <!-- ===== JOB 07 ===== -->
-        <article data-id="job-07" data-status="none"
-                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all animate-card-in border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
+        <article id="job-7" data-status="none"
+                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
           <div class="card-body p-4 sm:p-5 gap-3">
             <header class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-slate-900 to-slate-700 text-white grid place-items-center font-display font-semibold text-sm tracking-wide">WF</div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-display font-semibold text-base sm:text-lg text-slate-900 leading-tight">Web Designer &amp; Developer</h3>
-                  <span data-field="status-badge" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
+                  <span id="badge-7" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
                 </div>
                 <p class="text-sm text-slate-500 mt-0.5">WebFlow Agency</p>
               </div>
-              <button class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job" data-action="delete">
+              <button id="delete-btn-7" class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </header>
- 
+
             <ul class="flex flex-wrap gap-x-3.5 gap-y-1.5 text-[13px] text-slate-500 m-0 p-0 list-none">
               <li class="inline-flex items-center gap-1.5">
                 <svg width="14" height="14" class="text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -450,40 +429,40 @@
                 <span class="font-medium text-slate-700">$80,000 - $120,000</span>
               </li>
             </ul>
- 
+
             <p class="text-sm text-slate-500 leading-relaxed">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
- 
+
             <div class="flex flex-wrap gap-2 mt-1">
-              <button data-action="interview" class="btn btn-sm btn-success btn-outline gap-1.5">
+              <button id="interview-btn-7" class="btn btn-sm btn-success btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 Interview
               </button>
-              <button data-action="rejected" class="btn btn-sm btn-error btn-outline gap-1.5">
+              <button id="rejected-btn-7" class="btn btn-sm btn-error btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 Rejected
               </button>
             </div>
           </div>
         </article>
- 
+
         <!-- ===== JOB 08 ===== -->
-        <article data-id="job-08" data-status="none"
-                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all animate-card-in border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
+        <article id="job-8" data-status="none"
+                 class="card bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-px transition-all border-l-[3px] border-l-transparent data-[status=interview]:border-l-emerald-500 data-[status=rejected]:border-l-red-500">
           <div class="card-body p-4 sm:p-5 gap-3">
             <header class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-slate-900 to-slate-700 text-white grid place-items-center font-display font-semibold text-sm tracking-wide">MF</div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-display font-semibold text-base sm:text-lg text-slate-900 leading-tight">React Native Developer</h3>
-                  <span data-field="status-badge" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
+                  <span id="badge-8" class="badge badge-sm hidden font-semibold uppercase tracking-wider text-[10px]"></span>
                 </div>
                 <p class="text-sm text-slate-500 mt-0.5">Mobile First Corp</p>
               </div>
-              <button class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job" data-action="delete">
+              <button id="delete-btn-8" class="btn btn-sm btn-ghost btn-circle text-slate-400 hover:text-red-500 hover:bg-red-50" aria-label="Delete job">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </header>
- 
+
             <ul class="flex flex-wrap gap-x-3.5 gap-y-1.5 text-[13px] text-slate-500 m-0 p-0 list-none">
               <li class="inline-flex items-center gap-1.5">
                 <svg width="14" height="14" class="text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -498,55 +477,49 @@
                 <span class="font-medium text-slate-700">$130,000 - $175,000</span>
               </li>
             </ul>
- 
+
             <p class="text-sm text-slate-500 leading-relaxed">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
- 
+
             <div class="flex flex-wrap gap-2 mt-1">
-              <button data-action="interview" class="btn btn-sm btn-success btn-outline gap-1.5">
+              <button id="interview-btn-8" class="btn btn-sm btn-success btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 Interview
               </button>
-              <button data-action="rejected" class="btn btn-sm btn-error btn-outline gap-1.5">
+              <button id="rejected-btn-8" class="btn btn-sm btn-error btn-outline gap-1.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 Rejected
               </button>
             </div>
           </div>
         </article>
- 
-      </div><!-- /#jobs-list -->
- 
-      <!-- Empty state (hidden by default — show when Interview/Rejected tabs are empty) -->
-      <div id="empty-state" class="hidden mt-5">
-        <div class="rounded-2xl bg-white border border-slate-200 py-16 px-6 text-center shadow-sm">
-          <div class="mx-auto w-16 h-16 rounded-2xl bg-blue-50 grid place-items-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3052F5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <path d="M14 2v6h6"/>
-              <path d="M9 13h6"/>
-              <path d="M9 17h4"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-xl font-semibold">No jobs available</h3>
-          <p class="mt-1 text-sm text-slate-500">Check back soon for new job opportunities</p>
+
+    </div><!-- /#jobs-list -->
+
+    <!-- Empty state (hidden by default — shown when Interview / Rejected tab has nothing) -->
+    <div id="empty-state" class="hidden mt-5">
+      <div class="rounded-2xl bg-white border border-slate-200 py-16 px-6 text-center shadow-sm">
+        <div class="mx-auto w-16 h-16 rounded-2xl bg-blue-50 grid place-items-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3052F5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 2v6h6"/>
+            <path d="M9 13h6"/>
+            <path d="M9 17h4"/>
+          </svg>
         </div>
+        <h3 class="font-display text-xl font-semibold">No jobs available</h3>
+        <p class="mt-1 text-sm text-slate-500">Check back soon for new job opportunities</p>
       </div>
-    </section>
- 
-    <!-- Footer -->
-    <footer class="mt-16 pt-6 border-t border-slate-200 text-xs text-slate-400 flex items-center justify-between">
-      <span>Built with Tailwind CSS + DaisyUI · Vanilla JS</span>
-      <span class="hidden sm:inline">© 2026 JobTrail</span>
-    </footer>
-  </div>
- 
-  <script src="functionality.js"></script>
- 
- 
- 
-</body>
-</html>
- 
-   
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-16 pt-6 border-t border-slate-200 text-xs text-slate-400 flex items-center justify-between">
+    <span>Built with Tailwind CSS + DaisyUI · Vanilla JS</span>
+    <span class="hidden sm:inline">© 2026 JobTrail</span>
+  </footer>
+</div>
+
+<script src="functionality.js"></script>
+
 </body>
 </html>
